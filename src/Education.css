@@ -1,0 +1,23 @@
+.education-section {
+  padding: 4rem 10vw;
+  background-color: black;
+  color: white;
+}
+
+.education-section h2 {
+  font-size: 2rem;
+  color: #ff5fd2;
+  margin-bottom: 2rem;
+}
+
+.education-box {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-left: 4px solid #ff5fd2;
+  background-color: #111;
+  transition: all 0.3s ease;
+}
+
+.education-box:hover {
+  background-color: #1a1a1a;
+}

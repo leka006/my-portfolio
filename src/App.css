@@ -1,0 +1,215 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth; /* 👈 Smooth scroll */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: black;
+  color: #fff;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 👈 One full screen */
+  background-color: black;
+  color: white;
+}
+/* Navbar */
+nav {
+  text-align: right;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fc87fc;
+}
+
+/* Hero Section */
+.hero {
+  height: calc(100vh - 60px); /* subtract navbar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-top: 50px; /* push it below the fixed navbar */
+  display: flex;
+  position: relative;
+}
+.zoom-name {
+  display: inline-block;
+  transition: transform 1.2s ease, opacity 1.2s ease;
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.zoom-name.zoomed {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
+.hero h1 {
+  font-size: 9rem;
+  font-weight: 900;
+  color: #1a40e8;
+  letter-spacing: 2px;
+  background: linear-gradient(145deg, #fff, #ff69b4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    1px 1px 0 #ffffff,
+    2px 2px 0 #f0f,
+    3px 3px 0 #f0f0f0;
+  margin: 0;
+   position: relative;
+    display: flex;
+    text-align: center;
+}
+
+
+.hero p {
+  font-size: 5.5rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.footer {
+  margin-top: auto;
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: black;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.footer-icons a {
+  margin: 0 1.5rem; /* 👉 Add horizontal space */
+}
+
+.footer-icons a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0.8);
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+.footer h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #ff69b4; /* Optional highlight color */
+  letter-spacing: 1.5px;
+}
+.separator {
+  font-size: 1.5rem;
+  padding: 0 0.3rem;
+  user-select: none;
+}
+.floating-rockets {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.rocket {
+  position: absolute;
+  width: 50px;
+  opacity: 0.8;
+  animation: flyRocket 10s linear infinite;
+}
+
+/* Fly like real paper rockets (diagonal) */
+@keyframes flyRocket {
+  0% {
+    transform: translate(-10%, 100%) rotate(-45deg); /* bottom-left corner */
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(110vw, -10vh) rotate(20deg); /* top-right */
+    opacity: 0;
+  }
+}
+
+/* Different delays & positions for each rocket */
+.rocket-0 {
+  top: 70%;
+  left: -50px;
+  animation-delay: 0s;
+}
+
+.rocket-1 {
+  top: 50%;
+  left: -70px;
+  animation-delay: 3s;
+}
+
+.rocket-2 {
+  top: 90%;
+  left: -90px;
+  animation-delay: 6s;
+}
+.about-section {
+  height: 100vh;
+  background-color: black;
+  color: white;
+  padding: 4rem 10vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff5fd2; /* or any bright color you like */
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
