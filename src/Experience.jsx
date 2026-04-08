@@ -5,6 +5,7 @@ function Experience() {
   return (
     <section className="experience-section" id="experience">
       <h2>EXPERIENCE</h2>
+      <br></br>
       <div className="experience-cards">
         <div className="experience-card">
           <h3>AI developer Intern</h3>

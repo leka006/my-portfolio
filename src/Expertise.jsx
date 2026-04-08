@@ -3,15 +3,16 @@ import './Expertise.css';
 
 function Expertise() {
   const categories = {
-    Languages: ['HTML', 'CSS', 'JavaScript', 'Python'],
-    Frameworks: ['React', 'OpenCV', 'scikit-learn'],
-    Tools: ['Figma'],
-    Databases: ['MySQL', 'MongoDB']
+    LANGUAGES: ['HTML', 'CSS', 'JavaScript', 'Python'],
+    FRAMEWORKS: ['React', 'OpenCV', 'scikit-learn'],
+    TOOLS: ['Figma'],
+    DATABASES: ['MySQL', 'MongoDB']
   };
 
   return (
     <section className="expertise-section" id="expertise">
       <h2>EXPERTISE</h2>
+      <br></br>
       <div className="skills-category-grid">
         {Object.entries(categories).map(([category, skills], idx) => (
           <div key={idx} className="skill-category">

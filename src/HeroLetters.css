@@ -1,0 +1,25 @@
+/* 🔥 Premium thin font */
+@import url('https://fonts.cdnfonts.com/css/general-sans');
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MAIN TEXT */
+.hero h1 {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 600;        /* 🔥 thin */
+  font-size: 8rem;
+  letter-spacing: 5px;     /* 🔥 spacing like premium sites */
+  color: white;
+  text-rendering: optimizeLegibility;
+}
+
+/* EACH LETTER */
+.zoom-letter {
+  display: inline-block;
+  transition: transform 0.1s ease-out;
+}

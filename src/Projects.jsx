@@ -1,12 +1,17 @@
 import React from "react";
 import './Projects.css';
-import {SiPython,SiOpencv, SiScikitlearn} from "react-icons/si";
+import {SiPython,SiOpencv, SiScikitlearn,SiReact} from "react-icons/si";
 
 function Projects() {
   const projects = [
     {
       title: "Oncology Prediction",
       techIcon: <SiPython size={40} color="#FFD43B" />,
+      link: "https://github.com/leka006/Breast-Cancer-Detection-System-"
+    },
+    {
+      title: "Climora",
+      techIcon: <SiReact size={40} color="#61DAFB" />,
       link: "https://github.com/leka006/Breast-Cancer-Detection-System-"
     },
     {
@@ -34,6 +39,7 @@ function Projects() {
   return (
     <section className="projects-section" id="projects">
       <h2>MY WORK</h2>
+      <br></br>
       <h3>RECENT PROJECTS</h3>
       <div className="project-list">
         {projects.map((project, index) => (

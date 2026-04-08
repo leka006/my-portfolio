@@ -1,0 +1,44 @@
+nav {
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  font-size: 18px;
+}
+
+/* 🔥 push ul to right */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+  font-family: 'amaze script',cursive; 
+  font-style: italic; /* ✅ this fixes right alignment */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #f594d6;
+}
+
+/* Stylish LS logo */
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #fc87fc;
+  letter-spacing: 0;
+
+  /* stronger glow */
+  text-shadow: 
+    0 0 8px #f346c2, 
+    0 0 15px #bc2293, 
+    0 0 20px #ae2d9b;
+}

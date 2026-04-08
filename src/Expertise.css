@@ -1,19 +1,37 @@
 .expertise-section {
   color: rgb(241, 103, 207);
   padding: 4rem 10vw;
-  text-align:left;
+  text-align:center;
   
 }
 .expertise-section h2{
-font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #ff5fd2;
+ font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffe4f2 40%,
+    #ffb6d9 70%,
+    #ff69b4 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow:
+    0 1px 0 #fff,
+    0 2px 8px rgba(255, 105, 180, 0.4);
+
+  text-align: center;
 }
 .skills-category-grid {
   color: rgb(255, 255, 255);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem 6rem; 
+   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr; 
   justify-content:center;
   margin-top: 2rem;
 }
@@ -22,9 +40,23 @@ font-size: 2.5rem;
   text-align: left;
 }
 .skill-category h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
   font-size: 1.4rem;
-  color: #fdfdfd;
-  margin-bottom: 1rem;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffe4f2 40%,
+    #ffb6d9 70%,
+    #ff69b4 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  
+  font-style: italic;
+  margin-bottom: 15px;
 }
 
 .skills-grid {
