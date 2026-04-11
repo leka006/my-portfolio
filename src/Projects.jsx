@@ -6,58 +6,67 @@ function Projects() {
   const projects = [
     {
       title: "Oncology Prediction",
-      techIcon: <SiPython size={40} color="#FFD43B" />,
+      desc: "Breast cancer detection using ML",
+      techIcon: <SiPython size={60} color="#FFD43B" />,
       link: "https://github.com/leka006/Breast-Cancer-Detection-System-"
     },
     {
       title: "Climora",
-      techIcon: <SiReact size={40} color="#61DAFB" />,
+      desc: "Weather-based disease prediction",
+      techIcon: <SiReact size={60} color="#61DAFB" />,
       link: "https://github.com/leka006/Breast-Cancer-Detection-System-"
     },
     {
-      title: "Periodontal Disease Prediction",
-      techIcon: <SiPython size={40} color="#FFD43B" />,
+      title: "Periodontal Disease",
+      desc: "AI-based dental disease detection",
+      techIcon: <SiPython size={60} color="#FFD43B" />,
       link: "https://github.com/leka006/Periodontal-Disease-Prediction"
     },
     {
       title: "Color Detection",
-      techIcon: <SiOpencv size={40} color="#5C3EE8" />,
+      desc: "Detect colors using OpenCV",
+techIcon: <SiOpencv size={60} color="#5C3EE8" />,
       link: "https://github.com/leka006/Color-Detection"
     },
     {
       title: "Disease Detector",
-      techIcon: <SiScikitlearn size={40} color="#F7931E" />,
-      link: "https://github.com/leka006/AI-Disease-Detector"
+      desc: "ML model for disease prediction",
+techIcon: <SiScikitlearn size={60} color="#F7931E" />,      link: "https://github.com/leka006/AI-Disease-Detector"
     },
     {
       title: "Fraud Email Detection",
-      techIcon: <SiScikitlearn size={40} color="#F7931E" />,
-      link: "https://github.com/leka006/Fraud-Email-Detection"
+      desc: "Spam detection using ML",
+techIcon: <SiScikitlearn size={60} color="#F7931E" />,      link: "https://github.com/leka006/Fraud-Email-Detection"
     }
   ];
 
   return (
     <section className="projects-section" id="projects">
-      <h2>MY WORK</h2>
-      <br></br>
-      <h3>RECENT PROJECTS</h3>
+      <h2>PROJECTS</h2>
+
       <div className="project-list">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <div className="tech-icon">{project.techIcon}</div>
-            <div className="card-footer">
-              <h4>{project.title}</h4>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="arrow-btn"
-                title="View on GitHub"
-              >
-                ➜
-              </a>
+          <a 
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-card"
+            key={index}
+          >
+            <div className="card-inner">
+              {/* FRONT */}
+              <div className="card-front">
+                <div className="tech-icon">{project.techIcon}</div>
+              </div>
+
+              {/* BACK */}
+              <div className="card-back">
+                <h4>{project.title}</h4>
+                <p>{project.desc}</p>
+              </div>
+
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

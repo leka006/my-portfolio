@@ -50,6 +50,7 @@ body {
 
 
 /* Pink smudged background */
+/* 🌫️ Floating pink nebula */
 .pink-smudge-bg {
   position: fixed;
   top: 0;
@@ -58,11 +59,64 @@ body {
   height: 100%;
   background: radial-gradient(
     circle at 60% 40%,
-    rgba(255, 105, 180, 0.15) 0%,
+    rgba(255, 105, 180, 0.2),
     rgba(0, 0, 0, 0.95) 60%
   );
   filter: blur(120px);
-  z-index: -2;
-  opacity: 1;
+  z-index: -3;
   pointer-events: none;
+
+  animation: floatBg 25s ease-in-out infinite alternate;
 }
+
+@keyframes floatBg {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-80px, 40px) scale(1.1); }
+  100% { transform: translate(80px, -40px) scale(1); }
+}
+
+/* ✨ Stars */
+.stars, .stars2 {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  z-index: -2;
+}
+
+/* small stars */
+.stars {
+  box-shadow:
+    100px 200px #ff69b4,
+    300px 400px #ff69b4,
+    500px 100px #ff69b4,
+    700px 600px #ff69b4,
+    900px 300px #ff69b4,
+    1200px 500px #ff69b4,
+    1500px 200px #ff69b4,
+    1700px 700px #ff69b4,
+    200px 800px #ff69b4,
+    600px 900px #ff69b4;
+
+  animation: moveStars 20s linear infinite;
+}
+
+/* bigger stars (depth layer) */
+.stars2 {
+  box-shadow:
+    150px 300px #ffc0cb,
+    350px 600px #ffc0cb,
+    650px 200px #ffc0cb,
+    950px 700px #ffc0cb,
+    1250px 400px #ffc0cb;
+
+  animation: moveStars 40s linear infinite;
+}
+
+/* vertical movement */
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+/* ⭐ Shooting stars */

@@ -9,9 +9,13 @@ import Footer from './Footer';
 import HeroLetters from './HeroLetters'; // ✅ import component
 
 function App() {
+  
   return (
     <>
-      <div className="pink-smudge-bg" />
+      <div className="pink-smudge-bg"></div>
+<div className="stars"></div>
+<div className="stars2"></div>
+<div className="shooting-stars"></div>
       <Navbar />
 
       {/* Hero section */}
