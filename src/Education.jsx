@@ -4,7 +4,7 @@ import './Education.css';
 function Education() {
   return (
     <section className="education-section" id="education">
-      <h2>EDUCATION</h2>
+      <h2>Education</h2>
       <br></br>
       <div className="education-box">
         <h3>Bachelor of Engineering in Computer Science</h3>

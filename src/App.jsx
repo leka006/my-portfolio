@@ -19,7 +19,7 @@ function App() {
       <Navbar />
 
       {/* Hero section */}
-      <HeroLetters text="LEKASREE" />
+      <HeroLetters />
 
       <About />
       <Projects />

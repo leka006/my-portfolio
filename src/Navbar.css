@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;800&display=swap');
 nav {
   color: white;
   padding: 1rem 2rem;
@@ -7,7 +8,7 @@ nav {
   width: 100%;
   top: 0;
   z-index: 100;
-  font-size: 18px;
+  font-size: 12.5px;
 }
 
 /* 🔥 push ul to right */
@@ -16,8 +17,9 @@ nav ul {
   display: flex;
   gap: 1.5rem;
   margin-left: auto;
-  font-family: 'amaze script',cursive; 
-  font-style: italic; /* ✅ this fixes right alignment */
+  font-family: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  font-style: normal;
+   /* ✅ this fixes right alignment */
 }
 
 nav a {
@@ -26,19 +28,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #f594d6;
+  color: #ae86a4;
 }
 
 /* Stylish LS logo */
-.logo {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color: #fc87fc;
-  letter-spacing: 0;
-
-  /* stronger glow */
-  text-shadow: 
-    0 0 8px #f346c2, 
-    0 0 15px #bc2293, 
-    0 0 20px #ae2d9b;
-}

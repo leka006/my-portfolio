@@ -3,26 +3,30 @@ import './Expertise.css';
 
 function Expertise() {
   const categories = {
-    LANGUAGES: ['HTML', 'CSS', 'JavaScript', 'Python'],
-    FRAMEWORKS: ['React', 'OpenCV', 'scikit-learn'],
-    TOOLS: ['Figma'],
-    DATABASES: ['MySQL', 'MongoDB']
+    LANGUAGES: ['Python', 'Java', 'JavaScript', 'C'],
+    FRAMEWORKS: ['React', 'Flask', 'TensorFlow', 'PyTorch'],
+    AI / ML: ['Machine Learning', 'Computer Vision', 'NLP', 'Generative AI'],
+    DATABASES: ['MySQL', 'MongoDB', 'PostgreSQL'],
+    TOOLS: ['Git', 'GitHub', 'VS Code', 'Streamlit']
   };
 
   return (
     <section className="expertise-section" id="expertise">
       <h2>EXPERTISE</h2>
-      <br></br>
-      <div className="skills-category-grid">
-        {Object.entries(categories).map(([category, skills], idx) => (
-          <div key={idx} className="skill-category">
-            <h3>{category}</h3>
-            <div className="skills-grid">
-              {skills.map((skill, index) => (
-                <div key={index} className="skill-box">
-                  {skill}
-                </div>
-              ))}
+
+      <div className="expertise-list">
+        {Object.entries(categories).map(([category, skills], index) => (
+          <div className="expertise-row" key={category}>
+            <div className="expertise-number">
+              {String(index + 1).padStart(2, '0')}
+            </div>
+
+            <div className="expertise-category">
+              {category}
+            </div>
+
+            <div className="expertise-skills">
+              {skills.join(' · ')}
             </div>
           </div>
         ))}

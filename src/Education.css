@@ -1,38 +1,36 @@
 .education-section {
-  padding: 4rem 10vw;
-  color: white;
+    --ink: #ecebe6;
+  --muted: #8d8d93;
+  --line: rgba(255, 255, 255, 0.12);
+  --hover: rgba(255, 255, 255, 0.05);
+  --accent: #7e6076;
+
+  box-sizing: border-box;
+  padding: clamp(72px, 12vh, 140px) 4vw;
+  background: var(--bg);
+  color: var(--ink);
+
+  font-family: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 }
 
 .education-section h2 {
-   font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-size: 3.5rem;
-
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #ffe4f2 40%,
-    #ffb6d9 70%,
-    #ff69b4 100%
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  text-shadow:
-    0 1px 0 #fff,
-    0 2px 8px rgba(255, 105, 180, 0.4);
-
-  text-align: center;
+  margin: 0 0 clamp(32px, 6vw, 72px);
+  padding: 0;
+  font-family: 'Unbounded', 'Arial Black', system-ui, sans-serif;
+  font-size: clamp(20px, 8vw, 80px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
 .education-box {
   margin-bottom: 2rem;
   padding: 1rem;
-  border-left: 4px solid #fb00b4;
+  border-left: 4px solid #ba77a7;
   background-color: #111;
   transition: all 0.3s ease;
-  font-style: italic;
+  
 }
 
 .education-box:hover {
