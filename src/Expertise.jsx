@@ -12,7 +12,7 @@ function Expertise() {
 
   return (
     <section className="expertise-section" id="expertise">
-      <h2>EXPERTISE</h2>
+      <h2>Expertise</h2>
 
       <div className="skills-category-grid">
         {Object.entries(categories).map(([category, skills], idx) => (
